@@ -1,1 +1,3 @@
-kaiekkart.be
+Portfoliosite: http://www.kaiekkart.be/
+
+Themasite: https://www.kaiekkart.be/themasite/
