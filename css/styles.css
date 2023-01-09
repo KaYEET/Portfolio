@@ -1,0 +1,257 @@
+/*Default styling*/
+html {
+    font-family: "Arial",
+        sans-serif;
+    background-color: lightgrey;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    background: black;
+}
+
+footer {
+    color: rgb(63, 51, 60)
+}
+
+abbr {
+    font-style: italic;
+    font-weight: 100;
+}
+
+p {
+    padding: 2px;
+    font-size: 18px;
+}
+
+.defH2 {
+    text-align: center;
+    padding: 2px;
+    font-size: 22px;
+}
+
+/*main grid voor elke pagina*/
+.containterMain {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0;
+}
+
+.cel2Main {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+/*Navigatie bar*/
+nav ul {
+    margin: 0;
+    padding-right: 80px;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 150px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: #0087ca;
+}
+
+.active {
+    color: salmon;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+/*dropdown menu navigatie bar*/
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+li {
+    display: block;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+ul li ul {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    margin-top: 1rem;
+    left: -160px;
+}
+
+ul li:hover>ul,
+ul li:focus-within>ul,
+.dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+ul li ul li {
+    clear: both;
+    width: 55%;
+    background: black;
+
+}
+
+/*titles*/
+.hiddentitle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    left: -10000px;
+}
+
+/*Homepage*/
+.containerHP p {
+    font-weight: 300;
+}
+
+/*grid voor homepage*/
+.containerHP {
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    grid-gap: 20px;
+}
+
+.cel2HP {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.logo {
+    float: left;
+    padding: 0;
+    width: 100%;
+
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/*grid voor overzicht*/
+.containerOverzicht {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 5% 5% 90%;
+    margin: 0;
+}
+
+.cel1Overzicht {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.websiteFoto {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 70%;
+    height: auto;
+    text-align: right;
+    margin-top: 30px;
+}
+/*grid voor portfoliosite*/
+.containerPS {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    margin: 0;
+}
+.cel1PS {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.cel2PS {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 95%;
+    height: auto;
+    text-align: right;
+    margin-top: 30px;
+}
+.H2PS {
+    text-align: Left;
+    padding: 2px;
+    font-size: 22px;
+}
+
+/*css voor de image gallery op het overzicht van mijn projecten*/
+
+div.gallery {
+  margin: 3%;
+  border: 1px solid #bbb;
+  float: left;
+  width: 25%;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
